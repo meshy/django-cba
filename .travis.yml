@@ -1,0 +1,19 @@
+language: python
+python:
+  - 3.4
+  - 3.3
+  - 2.7
+script: make test
+notifications:
+  email: false
+env:
+  global:
+    - DATABASE_URL='postgres://postgres@localhost/cba'
+  matrix:
+    - DJANGO='django>=1.7,<1.8'
+install:
+  - psql -c 'CREATE DATABASE cba' -U postgres;
+  - pip install -r requirements.txt
+  - pip install $DJANGO
+  - pip install python-coveralls
+after_success: coveralls
