@@ -4,7 +4,7 @@
 ## What is `django-cba`
 
 `django-cba` aims to be an unofficial replacement for Django's (fantastic)
-admin interface, builing upon class-based views, and making use of the
+admin interface, building upon class-based views, and making use of the
 app-loading refactor made available in Django 1.7.
 
 
