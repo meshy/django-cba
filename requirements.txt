@@ -6,6 +6,7 @@ colour-runner==0.0.4
 coverage==3.7.1
 dj-database-url==0.3.0
 dj-inmemorystorage==1.2.0
+factory-boy==2.4.1
 flake8==2.2.5
 flake8-import-order==0.5.3
 psycopg2==2.5.4
