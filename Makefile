@@ -6,7 +6,7 @@ help:
 
 test:
 	@coverage run ./cba/tests/run.py
-	@coverage report --show-missing
+	@coverage report --fail-under=100
 	@flake8
 
 release:
