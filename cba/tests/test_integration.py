@@ -102,8 +102,8 @@ class AdminModelCreateTest(TestCase):
 
         # Ensure "created" message visible to user
         messages = get_messages(response_post.request)
+        self.assertIn('Person created.', messages)
         self.assertEqual(len(messages), 1)
-        self.assertEqual(messages[0], 'Person created.')
 
 
 class AdminModelUpdateTest(TestCase):
@@ -136,8 +136,8 @@ class AdminModelUpdateTest(TestCase):
 
         # Ensure an "updated" message is displayed to the user
         messages = get_messages(response_post.request)
+        self.assertIn('Person updated.', messages)
         self.assertEqual(len(messages), 1)
-        self.assertEqual(messages[0], 'Person updated.')
 
 
 class AdminModelDeleteTest(TestCase):
@@ -172,5 +172,5 @@ class AdminModelDeleteTest(TestCase):
 
         # Ensure "deleted" message visible to user
         messages = get_messages(response_post.request)
+        self.assertIn('Person deleted.', messages)
         self.assertEqual(len(messages), 1)
-        self.assertEqual(messages[0], 'Person deleted.')
