@@ -35,7 +35,7 @@ class AdminAppIndexTest(TestCase):
     @expectedFailure
     def test_app_index(self):
         """See the list of models in an app so I can find content in the app."""
-        # GET the inxex of the app
+        # GET the index of the app
         url = reverse('cba:tests:index')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
